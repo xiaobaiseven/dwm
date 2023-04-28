@@ -57,8 +57,8 @@ typedef struct {
   const char *name;
   const void *cmd;
 } Sp;
-const char *spcmd1[] = {"kitty", "-n", "spterm", "-g", "120x34", NULL};
-const char *spcmd2[] = {"kitty",  "-n", "spfm",   "-g",
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL};
+const char *spcmd2[] = {"st",     "-n", "spfm",   "-g",
                         "144x41", "-e", "ranger", NULL};
 const char *spcmd3[] = {"keepassxc", NULL};
 static Sp scratchpads[] = {
@@ -137,7 +137,7 @@ static char dmenumon[2] =
 static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
-static const char *termcmd[] = {"kitty", NULL};
+static const char *termcmd[] = {"st", NULL};
 static const char *roficmd[] = {"rofi",   "-show",  "drun",
                                 "-theme", "arthur", NULL};
 static const char *roficmd1[] = {"rofi",   "-show",  "run",
