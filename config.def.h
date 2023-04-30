@@ -142,7 +142,8 @@ static const char *roficmd[] = {"rofi",   "-show",  "drun",
                                 "-theme", "arthur", NULL};
 static const char *roficmd1[] = {"rofi",   "-show",  "run",
                                  "-theme", "arthur", NULL};
-static const char *browsercmd[] = {"firefox",
+static const char *browsercmd[] = {"chromium", "--force-dark-mode",
+                                   "--enable-features=WebUIDarkMode",
                                    "--enable-features=VaapiVideoDecoder", NULL};
 static const char *radomchwp[] = {
     "/home/xihe/.config/scripts/random-change-sp.sh", NULL};
