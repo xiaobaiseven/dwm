@@ -7,6 +7,8 @@ static const char *downvol[] = {"amixer", "-qM",   "set", "Master",
                                 "5%-",    "umute", NULL};
 static const char *upvol[] = {"amixer", "-qM",   "set", "Master",
                               "5%+",    "umute", NULL};
+static const char *uplight[] = {"light", "-A", "5", NULL};
+static const char *downlight[] = {"light", "-U", "5", NULL};
 static const unsigned int borderpx = 3; /* border pixel of windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int gappih = 10;  /* horiz inner gap between windows */
@@ -138,15 +140,16 @@ static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
 static const char *termcmd[] = {"st", NULL};
+const char *musicplay[] = {"kitty", "-e", "termusic", NULL};
 static const char *roficmd[] = {"rofi",   "-show",  "drun",
                                 "-theme", "arthur", NULL};
 static const char *roficmd1[] = {"rofi",   "-show",  "run",
                                  "-theme", "arthur", NULL};
-static const char *browsercmd[] = {"chromium", "--force-dark-mode",
+static const char *browsercmd[] = {"vivaldi", "--force-dark-mode",
                                    "--enable-features=WebUIDarkMode",
                                    "--enable-features=VaapiVideoDecoder", NULL};
 static const char *radomchwp[] = {
-    "/home/xihe/.config/scripts/random-change-sp.sh", NULL};
+    "/home/weixi/.config/scripts/random-change-sp.sh", NULL};
 static const char *screenshotcmd[] = {"flameshot", "gui", NULL};
 // static const char *screenshotcmd[] = {"flames", NULL};
 
@@ -155,6 +158,9 @@ static const Key keys[] = {
     {MODKEY, XK_F11, spawn, {.v = downvol}},            /*减小音量*/
     {MODKEY, XK_F9, spawn, {.v = mutevol}},             /*静音*/
     {MODKEY, XK_F12, spawn, {.v = upvol}},              /*增加音量*/
+    {MODKEY, XK_F7, spawn, {.v = uplight}},             /*增加音量*/
+    {MODKEY, XK_F6, spawn, {.v = downlight}},           /*增加音量*/
+    {Mod1Mask, XK_m, spawn, {.v = musicplay}},          /*增加音量*/
     {MODKEY, XK_p, spawn, {.v = dmenucmd}},             // 打开dmeun
     {MODKEY, XK_Return, spawn, {.v = termcmd}},         // 打开终端
     {MODKEY, XK_b, togglebar, {0}},                     // 状态条显示隐藏
