@@ -2,8 +2,8 @@
 
 /* appearance */
 static const char *mutevol[] = {"wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL};
-static const char *downvol[] = {"wpctl", "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-", NULL};
-static const char *upvol[] = {"wpctl", "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+", NULL};
+static const char *downvol[] = {"wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL};
+static const char *upvol[] = {"wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL};
 static const char *uplight[] = {"xbacklight", "-inc", "5", NULL};
 static const char *downlight[] = {"xbacklight", "-dec", "5", NULL};
 static const unsigned int borderpx = 3; /* border pixel of windows */
