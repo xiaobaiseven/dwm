@@ -1,12 +1,9 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char *mutevol[] = {"amixer", "-qM",    "set",
-                                "Master", "toggle", NULL};
-static const char *downvol[] = {"amixer", "-qM",   "set", "Master",
-                                "5%-",    "umute", NULL};
-static const char *upvol[] = {"amixer", "-qM",   "set", "Master",
-                              "5%+",    "umute", NULL};
+static const char *mutevol[] = {"wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL};
+static const char *downvol[] = {"wpctl", "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-", NULL};
+static const char *upvol[] = {"wpctl", "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+", NULL};
 static const char *uplight[] = {"xbacklight", "-inc", "5", NULL};
 static const char *downlight[] = {"xbacklight", "-dec", "5", NULL};
 static const unsigned int borderpx = 3; /* border pixel of windows */
@@ -18,7 +15,7 @@ static const unsigned int gappoh =
 static const unsigned int gappov =
     7; /* vert outer gap between windows and screen edge */
 static int smartgaps =
-    1; /* 1 means no outer gap when there is only one window */
+    0; /* 1 means no outer gap when there is only one window */
 static const int showbar = 1;       /* 0 means no bar */
 static const int topbar = 1;        /* 0 means bottom bar */
 #define ICONSIZE 15                 /* icon size */
@@ -32,10 +29,10 @@ static const int systraypinningfailfirst =
     1; /* 1: if pinning fails, display systray on the first monitor, False:
           display systray on the last monitor*/
 static const int showsystray = 1; /* 0 means no systray */
-static const char *fonts[] = {"Liberation Sans:style=Bold:size=10",
-                              "MiSans:style=Bold:size=10",
-                              "FiraCode Nerd Font Mono:size=12"};
-static const char dmenufont[] = "Liberation Sans:size=10";
+static const char *fonts[] = {"SF Pro:style=Bold:size=10",
+                              "FiraCode Nerd Font Mono:size=12",
+                              "LXGW WenKai:size=12"};
+static const char dmenufont[] = "SF Pro:size=10";
 static const char col_gray1[] = "#222222";
 static const char col_gray2[] = "#666666";
 static const char col_gray3[] = "#bd93f9";
@@ -144,12 +141,13 @@ static const char *roficmd[] = {"rofi",   "-show",  "drun",
                                 "-theme", "arthur", NULL};
 static const char *roficmd1[] = {"rofi",   "-show",  "run",
                                  "-theme", "arthur", NULL};
-static const char *browsercmd[] = {
+/*static const char *browsercmd[] = {
     "google-chrome-stable",
-    "--enable-features=TouchpadOverscrollHistoryNavigation,AcceleratedVideoDecodeLinuxGL,VaapiVideoDecodeLinuxGL,VaapiVideoDecoder,VaapiIgnoreDriverChecks,UseChromeOSDirectVideoDecoder,PlatformHEVCDecoderSupport,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE",
+    "--enable-features=TouchpadOverscrollHistoryNavigation,AcceleratedVideoDecodeLinuxGL,VaapiVideoEncoder,VaapiVideoDecoder,VaapiVideoDecodeLinuxGL,VaapiIgnoreDriverChecks,UseChromeOSDirectVideoDecoder,PlatformHEVCDecoderSupport,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE",
     "--ignore-gpu-blacklist",
     "--enable-accelerated-video-decode",
-    "--enable-zero-copy", NULL};
+    "--enable-zero-copy", NULL};*/
+static const char *browsercmd[] = {"firefox", NULL};
 static const char *radomchwp[] = {
     "/home/weixi/.config/scripts/random-change-sp.sh", NULL};
 static const char *screenshotcmd[] = {"flames", NULL};
