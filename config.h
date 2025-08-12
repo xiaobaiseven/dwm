@@ -31,7 +31,7 @@ static const int systraypinningfailfirst =
 static const int showsystray = 1; /* 0 means no systray */
 static const char *fonts[] = {"SF Pro:style=Bold:size=10",
                               "FiraCode Nerd Font Mono:size=12",
-                              "LXGW WenKai:size=12"};
+                              "MiSans:size=10"};
 static const char dmenufont[] = "SF Pro:size=10";
 static const char col_gray1[] = "#222222";
 static const char col_gray2[] = "#666666";
@@ -136,7 +136,7 @@ static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
 static const char *termcmd[] = {"st", NULL};
-const char *musicplay[] = {"st", "-e", "termusic", NULL};
+const char *musicplay[] = {"kitty", "-e", "termusic", NULL};
 static const char *roficmd[] = {"rofi",   "-show",  "drun",
                                 "-theme", "arthur", NULL};
 static const char *roficmd1[] = {"rofi",   "-show",  "run",
