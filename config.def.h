@@ -29,14 +29,14 @@ static const int systraypinningfailfirst =
     1; /* 1: if pinning fails, display systray on the first monitor, False:
           display systray on the last monitor*/
 static const int showsystray = 1; /* 0 means no systray */
-static const char *fonts[] = {"SF Pro:style=Bold:size=10",
+static const char *fonts[] = {"monospace:style=Bold:size=10",
                               "FiraCode Nerd Font Mono:size=12",
                               "MiSans:size=10"};
-static const char dmenufont[] = "SF Pro:size=10";
+static const char dmenufont[] = "monospace:size=10";
 static const char col_gray1[] = "#222222";
-static const char col_gray2[] = "#666666";
-static const char col_gray3[] = "#bd93f9";
-static const char col_gray4[] = "#8be9fd";
+static const char col_gray2[] = "#444444";
+static const char col_gray3[] = "#bbbbbb";
+static const char col_gray4[] = "#eeeeee";
 static const char col_cyan[] = "#005577";
 static const char col_border[] = "#bd93f9";
 static const unsigned int baralpha = 0xb4;
@@ -78,6 +78,7 @@ static const Rule rules[] = {
      */
     /* class      instance    title       tags mask     isfloating   monitor */
     {"Gimp", NULL, NULL, 0, 1, -1},
+    {"copyq", NULL, NULL, 0, 1, -1},
     {"Firefox", NULL, NULL, 1 << 8, 0, -1},
     {NULL, "spterm", NULL, SPTAG(0), 1, -1},
     {NULL, "spfm", NULL, SPTAG(1), 1, -1},
@@ -95,7 +96,7 @@ static const int resizehints =
 
 static const int lockfullscreen =
     1; /* 1 will force focus on the fullscreen window */
-
+static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
 static const Layout layouts[] = {
     /* symbol     arrange function */
     {"[]=", tile}, /* first entry is default */
@@ -136,7 +137,7 @@ static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
 static const char *termcmd[] = {"st", NULL};
-const char *musicplay[] = {"kitty", "-e", "termusic", NULL};
+const char *musicplay[] = {"st", "-e", "rmpc", NULL};
 static const char *roficmd[] = {"rofi",   "-show",  "drun",
                                 "-theme", "arthur", NULL};
 static const char *roficmd1[] = {"rofi",   "-show",  "run",
