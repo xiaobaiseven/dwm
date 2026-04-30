@@ -142,13 +142,13 @@ static const char *roficmd[] = {"rofi",   "-show",  "drun",
                                 "-theme", "arthur", NULL};
 static const char *roficmd1[] = {"rofi",   "-show",  "run",
                                  "-theme", "arthur", NULL};
-/*static const char *browsercmd[] = {
+static const char *browsercmd[] = {
     "google-chrome-stable",
     "--enable-features=TouchpadOverscrollHistoryNavigation,AcceleratedVideoDecodeLinuxGL,VaapiVideoEncoder,VaapiVideoDecoder,VaapiVideoDecodeLinuxGL,VaapiIgnoreDriverChecks,UseChromeOSDirectVideoDecoder,PlatformHEVCDecoderSupport,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE",
     "--ignore-gpu-blacklist",
     "--enable-accelerated-video-decode",
-    "--enable-zero-copy", NULL};*/
-static const char *browsercmd[] = {"firefox", NULL};
+    "--enable-zero-copy", NULL};
+//static const char *browsercmd[] = {"firefox", NULL};
 static const char *radomchwp[] = {
     "/home/weixi/.config/scripts/random-change-sp.sh", NULL};
 static const char *screenshotcmd[] = {"flames", NULL};
