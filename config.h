@@ -29,10 +29,10 @@ static const int systraypinningfailfirst =
     1; /* 1: if pinning fails, display systray on the first monitor, False:
           display systray on the last monitor*/
 static const int showsystray = 1; /* 0 means no systray */
-static const char *fonts[] = {"MiSans:style=Normal:size=10",
-                              "Maple Mono NF:size=12"
+static const char *fonts[] = {"Noto Sans CJK SC:style=Normal:size=10",
+                              "FiraCode Nerd Font Mono:size=12"
                               };
-static const char dmenufont[] = "MiSans:size=10";
+static const char dmenufont[] = "Noto Sans CJK SC:size=10";
 static const char col_gray1[] = "#222222";
 static const char col_gray2[] = "#444444";
 static const char col_gray3[] = "#bbbbbb";
@@ -68,9 +68,9 @@ static Sp scratchpads[] = {
 
 /* tagging */
 
-static const char *tags[] = {"\uf015  ¹", "\ue5fe  ²", "\uf030  ³",
-                             "\uf268  ⁴", "\uf269  ⁵", "\ue62a  ⁶",
-                             "\ue217  ⁷", "\uf2dc  ⁸", "\uf30d  ⁹"};
+static const char *tags[] = {"\uf015¹", "\ue5fe²", "\uf030³",
+                             "\uf268⁴", "\uf269⁵", "\ue62a⁶",
+                             "\ue217⁷", "\uf2dc⁸", "\uf30d⁹"};
 static const Rule rules[] = {
     /* xprop(1):
      *	WM_CLASS(STRING) = instance, class
@@ -142,13 +142,14 @@ static const char *roficmd[] = {"rofi",   "-show",  "drun",
                                 "-theme", "arthur", NULL};
 static const char *roficmd1[] = {"rofi",   "-show",  "run",
                                  "-theme", "arthur", NULL};
-static const char *browsercmd[] = {
+/*static const char *browsercmd[] = {
     "google-chrome-stable",
     "--enable-features=TouchpadOverscrollHistoryNavigation,AcceleratedVideoDecodeLinuxGL,VaapiVideoEncoder,VaapiVideoDecoder,VaapiVideoDecodeLinuxGL,VaapiIgnoreDriverChecks,UseChromeOSDirectVideoDecoder,PlatformHEVCDecoderSupport,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE",
     "--ignore-gpu-blacklist",
     "--enable-accelerated-video-decode",
-    "--enable-zero-copy", NULL};
+    "--enable-zero-copy", NULL};*/
 //static const char *browsercmd[] = {"firefox", NULL};
+static const char *browsercmd[] = {"bash", "/home/weixi/.config/scripts/open-browser.sh", NULL};
 static const char *radomchwp[] = {
     "/home/weixi/.config/scripts/random-change-sp.sh", NULL};
 static const char *screenshotcmd[] = {"flames", NULL};
