@@ -29,7 +29,7 @@ static const int systraypinningfailfirst =
     1; /* 1: if pinning fails, display systray on the first monitor, False:
           display systray on the last monitor*/
 static const int showsystray = 1; /* 0 means no systray */
-static const char *fonts[] = {"Source Han Sans CN:style=Normal:size=10", "SauceCodePro NF:style=Regular:size=12"};
+static const char *fonts[] = {"Source Han Sans CN:style=Normal:size=10", "SauceCodePro NF:style=Regular:size=10"};
 static const char dmenufont[] = "Source Han Sans CN:size=10";
 static const char col_gray1[] = "#222222";
 static const char col_gray2[] = "#444444";
@@ -66,9 +66,9 @@ static Sp scratchpads[] = {
 
 /* tagging */
 
-static const char *tags[] = {"\uf015¹", "\ue5fe²", "\uf030³",
-                             "\uf268⁴", "\uf269⁵", "\ue62a⁶",
-                             "\ue217⁷", "\uf2dc⁸", "\uf30d⁹"};
+static const char *tags[] = {"\uf015  ¹", "\ue5fe  ²", "\uf030  ³",
+                             "\uf268  ⁴", "\uf269  ⁵", "\ue62a  ⁶",
+                             "\ue217  ⁷", "\uf2dc  ⁸", "\uf30d  ⁹"};
 static const Rule rules[] = {
     /* xprop(1):
      *	WM_CLASS(STRING) = instance, class
